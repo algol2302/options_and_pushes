@@ -1,0 +1,7 @@
+*__pycache__*
+.idea/
+/backend/src/.venv/
+local.env
+prod.env
+/db
+/media
