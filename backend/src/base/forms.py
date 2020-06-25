@@ -1,8 +1,8 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django import forms
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.utils.translation import ugettext_lazy as _
 
-from .models import CustomUser, Pushes
+from .models import CustomUser, Pushes, Options
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -37,3 +37,9 @@ class PushForm(forms.ModelForm):
         labels = {
             'picture': _('Изображение уведомления'),
         }
+
+
+class OptionsForm(forms.ModelForm):
+    class Meta:
+        model = Options
+        fields = ['name', 'value']
