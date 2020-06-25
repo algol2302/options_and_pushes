@@ -12,3 +12,6 @@ class Options(models.Model):
         default=True,
         verbose_name=_('Значение')
     )
+
+    def __str__(self):
+        return f"Option id: {self.id} and name: {self.name}"
