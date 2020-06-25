@@ -29,6 +29,7 @@ class OptionsUpdateView(UpdateView):
     def get_success_url(self):
         return reverse_lazy('options-list')
 
+
 class OptionsDeleteView(DeleteView):
     model = Options
     success_url = reverse_lazy('options-list')
