@@ -7,10 +7,9 @@
 * http://localhost:8000/ - the home page of the app (only for logged in users)
 * http://localhost:8000/admin - usual django admin to rule users
 
-![login view](http://url/to/img.png)
-![pushes view](http://url/to/img.png)
-![options view](http://url/to/img.png)
-
+![login view](https://github.com/algol2302/options_and_pushes/blob/master/image0.png)
+![pushes view](https://github.com/algol2302/options_and_pushes/blob/master/image1.png)
+![options view](https://github.com/algol2302/options_and_pushes/blob/master/image2.png)
 
 
 ## Design
