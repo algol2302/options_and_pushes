@@ -1,6 +1,7 @@
 *__pycache__*
 .idea/
 /backend/src/.venv/
+/backend/src/static/
 local.env
 prod.env
 /db

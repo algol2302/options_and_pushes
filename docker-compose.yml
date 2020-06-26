@@ -5,24 +5,40 @@ services:
         image: postgres:12-alpine
         container_name: db
         env_file:
-            - local.env
+            - prod.env
         volumes:
             - "./db/main:/var/lib/postgresql/data"
         ports:
             - "5432:5432"
 
-#    backend:
-#        image: backend
-#        container_name: backend
-#        env_file:
-#            - local.env
-#        build:
-#            context: ./backend
-#            dockerfile: Dockerfile
-#        command: bash /gunicorn_run.sh
-#        ports:
-#            - "8000:8000"
-#        volumes:
-#            - ./backend/src:/app
-#        depends_on:
-#            - db
+    backend:
+        image: algol2302/options-and-pushes
+        container_name: backend
+        env_file:
+            - prod.env
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        command: bash /gunicorn_run.sh
+        ports:
+            - "8000:8000"
+        volumes:
+            - ./backend/src:/app
+        depends_on:
+            - db
+
+    nginx:
+        image: nginx:1.19-alpine
+        container_name: nginx
+        env_file:
+            - prod.env
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
+        volumes:
+            - "./data/media:/opt/media:ro"
+            - "./nginx/conf/nginx.conf:/etc/nginx/conf.d/default.conf:ro"
+        ports:
+            - 1080:80
+        depends_on:
+            - backend

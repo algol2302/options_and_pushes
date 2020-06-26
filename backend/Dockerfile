@@ -1,4 +1,4 @@
-FROM python:3.6-buster
+FROM python:3.7-buster
 
 RUN groupadd djangogroup && useradd -m -g djangogroup -s /bin/bash django
 
@@ -7,4 +7,7 @@ ADD src /app
 
 COPY ./gunicorn_run.sh /
 
-RUN pip install -r requirements.txt
+ENV PYTHONPATH=${PYTHONPATH}:${PWD}
+RUN pip3 install poetry
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-dev
