@@ -4,5 +4,5 @@
 /backend/src/static/
 local.env
 #prod.env
-/db
+/db/main
 /backend/src/media
