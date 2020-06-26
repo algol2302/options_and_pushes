@@ -26,6 +26,7 @@
 * [ ]  fit with the design (a lot of details)
 * [ ]  add supervisor (I've never used it)
 * [ ]  add tests
+* [ ]  fit templates with DRY 
 * [ ]  deploy to an public server (add to ALLOWED_HOSTS ip or an subdomain)
 * [ ]  test on the public server 
  
