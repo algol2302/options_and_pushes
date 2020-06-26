@@ -3,9 +3,11 @@
 ## Start
 * Just pull and run `docker-compose up --build`
 
-## Endpoints
+## Endpoints (now, there are only for local develop)
 * http://localhost:8000/ - the home page of the app
 * http://localhost:8000/admin - usual django admin to rule users
+
+
 
 ## Design
 
