@@ -3,6 +3,6 @@
 /backend/src/.venv/
 /backend/src/static/
 local.env
-prod.env
+#prod.env
 /db
 /backend/src/media
