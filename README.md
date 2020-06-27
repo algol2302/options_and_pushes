@@ -22,7 +22,8 @@
 * The app runs just on `docker-compose -f docker-compose.yml up -d`.
 * `docker-compose.override.yml` - for local development, in this case should to install poetry.
 * `nginx` is used for to proxy gunicorn and to provide static files.
-* `poetry` is used for a control of dependencies.
+* `poetry` is used for a control of dependencies. 
+* [requirements.txt](https://github.com/algol2302/options_and_pushes/blob/master/backend/src/requirements.txt)
 * The vps on aws lightsail.
 
 ## TODO
