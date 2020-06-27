@@ -39,6 +39,6 @@ services:
             - "./data/media:/opt/media:ro"
             - "./nginx/conf/nginx.conf:/etc/nginx/conf.d/default.conf:ro"
         ports:
-            - 1080:80
+            - 80:80
         depends_on:
             - backend

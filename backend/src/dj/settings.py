@@ -30,7 +30,7 @@ DEBUG = 'True' == os.environ.get('DEBUG')
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    '52.29.47.253'
+    '18.157.253.138'
 ]
 
 # Application definition
