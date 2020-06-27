@@ -3,7 +3,7 @@
 ## Start
 * Just pull and run `docker-compose up --build`
 
-## Endpoints (now, there are only for local develop)
+## Endpoints
 * http://18.157.253.138/ - the home page of the app (only for logged in users)
 * http://18.157.253.138/admin - usual django admin to rule users
 
@@ -23,10 +23,10 @@
 * nginx is used for to proxy gunicorn and to provide static files
 
 ## TODO
-* [X]  fit with the design (a lot of details)
+* [ ]  fit with the design (a lot of details)
 * [ ]  add supervisor (I've never used it)
 * [ ]  add tests
 * [ ]  fit templates with DRY 
-* [ ]  deploy to an public server (add to ALLOWED_HOSTS ip or an subdomain)
-* [ ]  test on the public server 
+* [X]  deploy to an public server (add to ALLOWED_HOSTS ip or an subdomain)
+* [X]  test on the public server 
  
