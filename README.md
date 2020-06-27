@@ -23,7 +23,7 @@
 * nginx is used for to proxy gunicorn and to provide static files
 
 ## TODO
-* [ ]  fit with the design (a lot of details)
+* [X]  fit with the design (a lot of details)
 * [ ]  add supervisor (I've never used it)
 * [ ]  add tests
 * [ ]  fit templates with DRY 
