@@ -10,5 +10,5 @@ CMD /bin/bash -c "python ./manage.py collectstatic --noinput"
 # ----------------------------------------------------------------------------------------------------------------------
 FROM nginx:1.19-alpine
 COPY ./conf/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=collection-static /app/static /var/www/static
+COPY --from=collection-static /app/static_files /var/www/static
 EXPOSE 80

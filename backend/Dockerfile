@@ -1,6 +1,13 @@
 FROM python:3.7-buster
 
+VOLUME /app/media
+EXPOSE 8000
+
 RUN groupadd djangogroup && useradd -m -g djangogroup -s /bin/bash django
+
+RUN apt-get update && \
+    apt-get install -y netcat && \
+    apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /app
 ADD src /app

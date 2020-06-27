@@ -2,6 +2,7 @@
 .idea/
 /backend/src/.venv/
 /backend/src/static/
+/backend/src/static_files/
 local.env
 #prod.env
 /db/main

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+while ! nc -z db 5432; do
+    echo "Waiting for PostgreSql to start..."
+    sleep 1
+done
+
 echo "Collect static files"
 python manage.py collectstatic --noinput
 

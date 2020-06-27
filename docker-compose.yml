@@ -23,6 +23,7 @@ services:
         ports:
             - "8000:8000"
         volumes:
+            - ./data/media:/app/media
             - ./backend/src:/app
         depends_on:
             - db
@@ -36,8 +37,8 @@ services:
             context: ./nginx
             dockerfile: Dockerfile
         volumes:
-            - "./data/media:/opt/media:ro"
-            - "./nginx/conf/nginx.conf:/etc/nginx/conf.d/default.conf:ro"
+            - ./data/media:/app/media:ro
+            - ./nginx/conf/nginx.conf:/etc/nginx/conf.d/default.conf:ro
         ports:
             - 80:80
         depends_on:
