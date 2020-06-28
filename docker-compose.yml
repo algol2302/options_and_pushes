@@ -10,6 +10,7 @@ services:
             - "./db/main:/var/lib/postgresql/data"
         ports:
             - "5432:5432"
+        restart: always
 
     backend:
         image: algol2302/options-and-pushes
@@ -27,6 +28,7 @@ services:
             - ./backend/src:/app
         depends_on:
             - db
+        restart: always
 
     nginx:
         image: nginx:1.19-alpine
@@ -43,3 +45,4 @@ services:
             - 80:80
         depends_on:
             - backend
+        restart: always
