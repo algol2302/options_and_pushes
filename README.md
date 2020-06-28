@@ -5,7 +5,9 @@
 
 ## Endpoints
 * http://18.157.253.138/ - the home page of the app (only for logged in users)
-* http://18.157.253.138/admin - usual django admin to rule users
+* http://18.157.253.138/admin - usual django admin to rule users and to look logs for `Pushes`
+NB: a client a and admin parts are different and have different purposes and accesses. 
+The client part is the app. The admin part is just for logs and user controls.
 
 ![login view](https://github.com/algol2302/options_and_pushes/blob/master/image0.png)
 ![pushes view](https://github.com/algol2302/options_and_pushes/blob/master/image1.png)
